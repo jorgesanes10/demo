@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Form Ejemplo</title>
+</head>
+<body>
+	<form action="" method="get">
+		{{ formset.management_form }}
+		{% for form in formset %}
+			{% for field in form %}
+				<ul>
+					<li>{{ field.label_tag }} {{ field }} </li>
+				</ul>
+			{% endfor %}
+		{% endfor %}
+	</form>
+</body>
+</html>
